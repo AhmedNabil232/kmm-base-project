@@ -6,6 +6,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
+    kotlin("plugin.serialization") version "1.8.20"
 
 }
 
@@ -33,7 +34,10 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+            //ktor
             implementation("io.ktor:ktor-client-android:2.1.1")
+            //koin
+            implementation("io.insert-koin:koin-android:4.0.0-RC1")
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -50,12 +54,19 @@ kotlin {
             implementation("io.ktor:ktor-serialization-kotlinx-json:2.1.1")
             // Coroutines
             implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+            //koin
+            api(libs.koin.core)
+            implementation(libs.koin.compose)
+            implementation(libs.lifecycle.viewmodel)
+            implementation(libs.navigation.compose)
 
-            implementation("io.ktor:ktor-client-android:2.1.1")
-            implementation("io.ktor:ktor-client-ios:2.1.1")
         }
         iosMain.dependencies {
+            //ktor
             implementation("io.ktor:ktor-client-ios:2.1.1")
+            //koin
+            implementation(libs.koin.core)
+            api(libs.koin.core)
         }
     }
 }
@@ -83,6 +94,7 @@ android {
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
+            isShrinkResources = false
         }
     }
     compileOptions {
