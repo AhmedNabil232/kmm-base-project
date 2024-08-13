@@ -6,7 +6,8 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
-    kotlin("plugin.serialization") version "1.8.20"
+    alias(libs.plugins.jetbrains.kotlin.parcelize)
+    alias(libs.plugins.jetbrains.kotlin.serialization)
 
 }
 
@@ -47,26 +48,26 @@ kotlin {
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
             implementation(projects.shared)
-            // Ktor client
-            implementation("io.ktor:ktor-client-core:2.1.1")
-            // Ktor serialization
-            implementation("io.ktor:ktor-client-content-negotiation:2.1.1")
-            implementation("io.ktor:ktor-serialization-kotlinx-json:2.1.1")
+            // Ktor
+            implementation(libs.ktor.client.core)
+            implementation(libs.ktor.client.serialization)
+            implementation(libs.ktor.client.content.negotiation)
+            implementation(libs.ktor.client.logging)
+            implementation(libs.ktor.serialization.kotlinx.json)
             // Coroutines
-            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0")
             //koin
             api(libs.koin.core)
             implementation(libs.koin.compose)
             implementation(libs.lifecycle.viewmodel)
             implementation(libs.navigation.compose)
+            implementation("io.coil-kt.coil3:coil-compose:3.0.0-alpha06")
+            implementation("io.coil-kt.coil3:coil-network-ktor:3.0.0-alpha06")
 
         }
         iosMain.dependencies {
             //ktor
             implementation("io.ktor:ktor-client-ios:2.1.1")
-            //koin
-            implementation(libs.koin.core)
-            api(libs.koin.core)
         }
     }
 }

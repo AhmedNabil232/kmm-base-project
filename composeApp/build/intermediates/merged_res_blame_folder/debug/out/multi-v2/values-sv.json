@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.composeApp-mergeDebugResources-56:/values-sv/values-sv.xml",
+            "outputFile": "com.example.composeApp-mergeDebugResources-57:/values-sv/values-sv.xml",
             "map": [
                 {
-                    "source": "/Users/ahmednabil/.gradle/caches/transforms-4/0e07e735ffff27522961f27237d2e2e5/transformed/appcompat-1.7.0/res/values-sv/values-sv.xml",
+                    "source": "/Users/ahmednabil/.gradle/caches/transforms-4/dedc68dd8d74efad2f764702984109b3/transformed/appcompat-1.7.0/res/values-sv/values-sv.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/ahmednabil/.gradle/caches/transforms-4/878958b607738dc9edee34a1f00c3031/transformed/core-1.13.1/res/values-sv/values-sv.xml",
+                    "source": "/Users/ahmednabil/.gradle/caches/transforms-4/91d1b47bf0e330946db44a44a282ac9a/transformed/core-1.13.1/res/values-sv/values-sv.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -38,24 +38,7 @@
                     }
                 },
                 {
-                    "source": "/Users/ahmednabil/.gradle/caches/transforms-4/9a7ead6810923846c97b26b4517d158e/transformed/foundation-release/res/values-sv/values-sv.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,145",
-                        "endColumns": "89,88",
-                        "endOffsets": "140,229"
-                    },
-                    "to": {
-                        "startLines": "56,57",
-                        "startColumns": "4,4",
-                        "startOffsets": "5208,5298",
-                        "endColumns": "89,88",
-                        "endOffsets": "5293,5382"
-                    }
-                },
-                {
-                    "source": "/Users/ahmednabil/.gradle/caches/transforms-4/7ffe564d8925a2dba3dd2d8b1bfb70ed/transformed/ui-release/res/values-sv/values-sv.xml",
+                    "source": "/Users/ahmednabil/.gradle/caches/transforms-4/94577716303f261cb50c1f3f87daa6d8/transformed/ui-release/res/values-sv/values-sv.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -69,6 +52,23 @@
                         "startOffsets": "3504,3597,3685,3781,3880,3968,4044,4132,4221,4302,4388,4558,4627,4701,4772,4943,5021,5088",
                         "endColumns": "92,87,95,98,87,75,87,88,80,85,89,68,73,70,69,77,66,119",
                         "endOffsets": "3592,3680,3776,3875,3963,4039,4127,4216,4297,4383,4473,4622,4696,4767,4837,5016,5083,5203"
+                    }
+                },
+                {
+                    "source": "/Users/ahmednabil/.gradle/caches/transforms-4/10ac9662dd26037c0410752a83f7acb8/transformed/foundation-release/res/values-sv/values-sv.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,145",
+                        "endColumns": "89,88",
+                        "endOffsets": "140,229"
+                    },
+                    "to": {
+                        "startLines": "56,57",
+                        "startColumns": "4,4",
+                        "startOffsets": "5208,5298",
+                        "endColumns": "89,88",
+                        "endOffsets": "5293,5382"
                     }
                 }
             ]
