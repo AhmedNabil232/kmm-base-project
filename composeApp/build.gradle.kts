@@ -41,13 +41,15 @@ kotlin {
             implementation("io.insert-koin:koin-android:4.0.0-RC1")
         }
         commonMain.dependencies {
+            implementation("com.google.code.gson:gson:2.8.8")
             implementation(compose.runtime)
-            implementation(compose.foundation)
-            implementation(compose.material)
-            implementation(compose.ui)
+            implementation(compose.material3)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
+            implementation(compose.ui)
             implementation(projects.shared)
+            implementation(libs.lifecycle.viewmodel)
+            implementation(libs.navigation.compose)
             // Ktor
             implementation(libs.ktor.client.core)
             implementation(libs.ktor.client.serialization)
@@ -59,8 +61,7 @@ kotlin {
             //koin
             api(libs.koin.core)
             implementation(libs.koin.compose)
-            implementation(libs.lifecycle.viewmodel)
-            implementation(libs.navigation.compose)
+
             implementation("io.coil-kt.coil3:coil-compose:3.0.0-alpha06")
             implementation("io.coil-kt.coil3:coil-network-ktor:3.0.0-alpha06")
 

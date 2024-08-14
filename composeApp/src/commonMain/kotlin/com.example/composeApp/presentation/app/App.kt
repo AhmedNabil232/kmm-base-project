@@ -1,94 +1,50 @@
 package com.example.composeApp.presentation.app
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.CircularProgressIndicator
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
-import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.unit.dp
-import coil3.compose.AsyncImage
-import com.example.composeApp.domain.model.Product
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import com.example.composeApp.presentation.common.AppBar
 import com.example.composeApp.presentation.utils.koinViewModel
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.koin.compose.KoinContext
+import org.koin.compose.getKoin
+import org.koin.core.qualifier.named
 
-@Composable
-fun ProductItem(product: Product) {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(16.dp)
-    ) {
-        Text(text = product.name, style = MaterialTheme.typography.h6)
-
-        if (product.images.isNotEmpty()) {
-            AsyncImage(
-                model = product.images.first(),
-                contentDescription = product.name,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(200.dp)
-                    .clip(RoundedCornerShape(8.dp))
-            )
-        }
-
-        Text(
-            text = "Price: $${product.price}",
-            style = MaterialTheme.typography.body1,
-            modifier = Modifier.padding(top = 8.dp)
-        )
-
-        Text(
-            text = "Rating: ${product.reviews.firstOrNull()?.rate ?: "N/A"}",
-            style = MaterialTheme.typography.body2,
-            modifier = Modifier.padding(top = 4.dp)
-        )
-    }
-}
-
-@Composable
-fun ProductList(products: List<Product>) {
-    LazyColumn {
-        items(products.size) { index ->
-            ProductItem(products[index])
-        }
-    }
-}
 
 @Composable
 @Preview
-fun App() {
+fun App(
+    navController: NavHostController = rememberNavController()
+) {
     KoinContext {
         MaterialTheme {
-            val viewModel = koinViewModel<AppViewModel>()
-            val products by viewModel.data.collectAsState()
-            val error by viewModel.error.collectAsState()
-            Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
-                when {
-                    error != null -> {
-                        // Show error message
-                        Text(text = "Error: $error", color = MaterialTheme.colors.error)
+            Scaffold(topBar = {
+                AppBar(title = "Products", canNavigateBack = false, navigateUp = {})
+            }) { innerPadding ->
+                val appScope = getKoin().createScope("appScope", named("app"))
+                val viewModel = koinViewModel<AppViewModel>()
+                NavHost(
+                    navController = navController,
+                    startDestination = ProductList,
+                    modifier = Modifier.fillMaxSize().padding(innerPadding)
+                ) {
+                    composable<ProductList> {
+                        ProductsListScreen(navController)
                     }
-
-                    products != null -> {
-                        // Show list of products
-                        ProductList(products ?: emptyList())
-                    }
-
-                    else -> {
-                        // Show loading indicator
-                        CircularProgressIndicator(modifier = Modifier.align(Alignment.CenterHorizontally))
+                    composable<ProductDetails> {
+                        ProductDetailsScreen()
                     }
                 }
+
             }
+
         }
     }
 }

@@ -19,7 +19,7 @@ lifecycleViewModel = "2.8.0-rc01"
 koin = "4.0.0-RC1"
 koinCompose = "3.6.0-alpha3"
 koinComposeMultiplatform = "1.2.0-alpha3"
-navigationCompose = "2.7.0-alpha03"
+navigationCompose = "2.8.0-alpha08"
 kotlinx-serialization-json = "1.6.3"
 kotlin-serialization = "1.9.10"
 

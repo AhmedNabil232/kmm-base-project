@@ -1,16 +1,16 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/ahmednabil/StudioProjects/Kmmbaseproject/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1123878941222398013.xml:2:13-83
-INJECTED from /Users/ahmednabil/StudioProjects/Kmmbaseproject/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1123878941222398013.xml:2:13-83
+ADDED from /Users/ahmednabil/StudioProjects/Kmmbaseproject/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3732236484046295273.xml:2:13-83
+INJECTED from /Users/ahmednabil/StudioProjects/Kmmbaseproject/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3732236484046295273.xml:2:13-83
 	package
-		INJECTED from /Users/ahmednabil/StudioProjects/Kmmbaseproject/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1123878941222398013.xml
+		INJECTED from /Users/ahmednabil/StudioProjects/Kmmbaseproject/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3732236484046295273.xml
 	xmlns:android
-		ADDED from /Users/ahmednabil/StudioProjects/Kmmbaseproject/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1123878941222398013.xml:2:23-81
+		ADDED from /Users/ahmednabil/StudioProjects/Kmmbaseproject/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3732236484046295273.xml:2:23-81
 uses-sdk
-INJECTED from /Users/ahmednabil/StudioProjects/Kmmbaseproject/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1123878941222398013.xml reason: use-sdk injection requested
-INJECTED from /Users/ahmednabil/StudioProjects/Kmmbaseproject/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1123878941222398013.xml
-INJECTED from /Users/ahmednabil/StudioProjects/Kmmbaseproject/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1123878941222398013.xml
+INJECTED from /Users/ahmednabil/StudioProjects/Kmmbaseproject/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3732236484046295273.xml reason: use-sdk injection requested
+INJECTED from /Users/ahmednabil/StudioProjects/Kmmbaseproject/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3732236484046295273.xml
+INJECTED from /Users/ahmednabil/StudioProjects/Kmmbaseproject/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3732236484046295273.xml
 	android:targetSdkVersion
-		INJECTED from /Users/ahmednabil/StudioProjects/Kmmbaseproject/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1123878941222398013.xml
+		INJECTED from /Users/ahmednabil/StudioProjects/Kmmbaseproject/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3732236484046295273.xml
 	android:minSdkVersion
-		INJECTED from /Users/ahmednabil/StudioProjects/Kmmbaseproject/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1123878941222398013.xml
+		INJECTED from /Users/ahmednabil/StudioProjects/Kmmbaseproject/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest3732236484046295273.xml

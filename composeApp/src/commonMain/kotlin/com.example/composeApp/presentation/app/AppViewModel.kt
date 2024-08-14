@@ -16,6 +16,7 @@ class AppViewModel(private val getExampleDataUseCase: GetExampleDataUseCase) : V
     val error: StateFlow<String?> get() = _error
 
     init {
+        println("Ahmed init view model")
         fetchData()
     }
 
@@ -27,5 +28,9 @@ class AppViewModel(private val getExampleDataUseCase: GetExampleDataUseCase) : V
                 _error.value = it.message
             }
         }
+    }
+
+    override fun onCleared() {
+        super.onCleared()
     }
 }
